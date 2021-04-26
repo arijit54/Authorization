@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "authorization-e7fa"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "authorization-e7fa"
+  template:
+    metadata:
+      labels:
+        app: "authorization-e7fa"
+    spec:
+      containers:
+        - name: "authorization-e7fa"
+          image: "authorization3.azurecr.io/authorization"
+          ports:
+          - containerPort: 80
