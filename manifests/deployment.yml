@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "authorization-e7fa"
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: "authorization-e7fa"
